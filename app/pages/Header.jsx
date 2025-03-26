@@ -16,7 +16,7 @@ const Header = () => {
             </div>
 
 
-            <div className=' bg-gray-500 w-11/12 rounded-2xl p-4 my-3 '>
+            <div className=' bg-gray-500 w-11/12 rounded-2xl p-4 my-3s '>
                 <Image id="image" src={img} alt='' className=' w-2xl mx-auto' />
 
             </div>
