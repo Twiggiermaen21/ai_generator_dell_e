@@ -1,18 +1,18 @@
 'use client'
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { generateImage } from "@/app/actions";
+import { generateImage } from "@/app/api/actions";
 import { useState } from "react";
 import Image from "next/image";
-import placeholder from "./placeholder.png";
+import placeholder from "@/public/placeholder.png";
 export function Generator() {
-    //1
+
     const [url, setUrl] = useState('');
 
-    //2
     const action = async (formData) => {
-        const imageData = await generateImage(formData)
-        setUrl(imageData.data[0].url)
+        //   const imageData = await generateImage(formData)
+        //   setUrl(imageData.data[0].url)
+        console.log("Generating image:" + formData.get('prompt'));
     }
 
     return (
@@ -34,11 +34,9 @@ export function Generator() {
                         type="text"
                     />
                     <Button
-                        className="px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-600"
-                        type="submit"
-                    >
-                        Generate
-                    </Button>
+                        className="px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2
+                         focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-600"
+                        type="submit"> Generate</Button>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-md shadow-md overflow-hidden">
 

@@ -1,11 +1,14 @@
 import Image from "next/image";
 
-import Main, { Generator } from ".";
+
+import Calendar from "./pages/calendar";
+import { Generator } from "./pages";
 
 export default function Home() {
   return (
     <div>
-      <Generator></Generator>
+      <Generator />
+      <Calendar />
     </div>
 
   );

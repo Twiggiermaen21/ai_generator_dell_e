@@ -16,9 +16,10 @@ export const generateImage = async (formData) => {
     }
 
     const res = await openaimodel.images.generate({
+        model: "dall-e-3",
         prompt: prompt,
-        n: 1,
-        size: '512x512',
+        //    n: 1,
+        //   size: '512x512',
     });
 
     return JSON.parse(JSON.stringify(res));
