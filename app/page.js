@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Header from "./pages/Header";
+
+import Main, { Generator } from ".";
 
 export default function Home() {
   return (
     <div>
-      <Header />
-
+      <Generator></Generator>
     </div>
 
   );
