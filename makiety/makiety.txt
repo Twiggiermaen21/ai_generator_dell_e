@@ -1,0 +1,6 @@
+1.logowanie
+2.storna glowna
+3.biblioteka
+4.strona poczatkowa
+5.edytor
+6.ustawienia uzytkownika

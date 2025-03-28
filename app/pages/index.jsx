@@ -10,8 +10,8 @@ export function Generator() {
     const [url, setUrl] = useState('');
 
     const action = async (formData) => {
-        //   const imageData = await generateImage(formData)
-        //   setUrl(imageData.data[0].url)
+        const imageData = await generateImage(formData)
+        setUrl(imageData.data[0].url)
         console.log("Generating image:" + formData.get('prompt'));
     }
 
