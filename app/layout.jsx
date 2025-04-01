@@ -24,13 +24,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SidebarProvider>
+        {/* <SidebarProvider>
           <AppSidebar />
-          <main>
-            <SidebarTrigger />
-            {children}
-          </main>
-        </SidebarProvider>
+          <main> */}
+        {/* <SidebarTrigger /> */}
+        {children}
+        {/* </main>
+        </SidebarProvider> */}
 
 
       </body>
