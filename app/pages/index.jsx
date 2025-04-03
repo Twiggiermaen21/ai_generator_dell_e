@@ -16,15 +16,17 @@ export function Generator() {
     }
 
     return (
-        <main className="flex flex-col items-center justify-center h-screen bg-gray-100 dark:bg-gray-900">
+        <main className="flex flex-row bg-gray-100 dark:bg-gray-900 rounded-2xl">
 
-            <form action={action} className="max-w-md w-full space-y-4 px-4">
+            <form action={action} className="space-y-4 p-4">
+
                 <div className="text-center space-y-2">
-                    <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">AI Image Generator</h1>
+                    <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mt-5">AI Image Generator</h1>
                     <p className="text-gray-600 dark:text-gray-400">
                         Enter a text prompt and let our AI generate an image for you.
                     </p>
                 </div>
+
                 <div className="flex space-x-2">
 
                     <Input
@@ -38,21 +40,22 @@ export function Generator() {
                          focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-600"
                         type="submit"> Generate</Button>
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded-md shadow-md overflow-hidden">
 
-                    <Image
-                        alt="Generated Image"
-                        className="w-full h-auto"
-                        height="512"
-                        src={url === '' ? placeholder : url}
-                        style={{
-                            aspectRatio: "1:1",
-                            objectFit: "cover",
-                        }}
-                        width="512"
-                    />
-                </div>
             </form>
+            <div className="bg-white dark:bg-gray-800 rounded-md shadow-md overflow-hidden">
+
+                <Image
+                    alt="Generated Image"
+                    className="w-full h-auto"
+                    height="512"
+                    src={url === '' ? placeholder : url}
+                    style={{
+                        aspectRatio: "1:1",
+                        objectFit: "cover",
+                    }}
+                    width="512"
+                />
+            </div>
         </main>
     )
 }
