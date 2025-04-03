@@ -17,12 +17,9 @@ export default function AuthLayout({ children }) {
         <html lang="en" >
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <div className="flex  items-center bg-white w-fit min-w-3xl h-full mt-40 m-auto border rounded-2xl  ">
+                <div className=" bg-white  min-w-4xl max-w-[900px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border rounded-2xl">
                     {children}
                 </div>
-
-
-
             </body>
         </html>
 
